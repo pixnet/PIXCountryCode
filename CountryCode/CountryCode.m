@@ -25,7 +25,7 @@
     self = [super init];
     if (self) {
         resultArray = [[NSMutableArray alloc] initWithCapacity:0];
-        countryDictionary = [[NSDictionary alloc] initWithDictionary:[self loadJsonFile]];
+        countryDictionary = [self loadJsonFile];
     }
     return self;
 }
@@ -37,14 +37,14 @@
 }
 -(NSMutableArray *)searchCountryCodeWithKeyword:(NSString *)keyword{
     [resultArray removeAllObjects];
-    NSDictionary *allCountry = [countryDictionary objectForKey:@"country_code"];
+    NSDictionary *allCountry = countryDictionary[@"country_code"];
     
     for (NSString *key in allCountry) {
-        NSString *countryName = [allCountry objectForKey:key];
+        NSString *countryName = allCountry[key];
         NSRange range =[countryName rangeOfString:keyword];
         if (range.length) {
-            NSLog(@"has keyword :%@",countryName);
-            NSDictionary *tmpDic = [[NSDictionary alloc] initWithObjectsAndKeys:[[countryDictionary objectForKey:@"id_to_countrycode"] objectForKey:key], @"code", countryName, @"countryName", nil];
+            //            NSLog(@"has keyword :%@",countryName);
+            NSDictionary *tmpDic = @{countryDictionary[@"id_to_countrycode"][key]: @"code", countryName: @"countryName"};
             [resultArray addObject:tmpDic];
         }
     }
