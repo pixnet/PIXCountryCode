@@ -44,7 +44,7 @@
         NSRange range =[countryName rangeOfString:keyword];
         if (range.length) {
             //            NSLog(@"has keyword :%@",countryName);
-            NSDictionary *tmpDic = @{countryDictionary[@"id_to_countrycode"][key]: @"code", countryName: @"countryName"};
+            NSDictionary *tmpDic = @{@"code": countryDictionary[@"id_to_countrycode"][key], @"countryName": countryName};
             [resultArray addObject:tmpDic];
         }
     }
