@@ -16,8 +16,8 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "CountryCode"
-  s.version      = "0.0.1"
-  s.summary      = "A short description of CountryCode."
+  s.version      = "0.0.2"
+  s.summary      = "Search Country Code."
 
   s.description  = <<-DESC
                    A longer description of CountryCode in Markdown format.
@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
                    * Finally, don't worry about the indent, CocoaPods strips it!
                    DESC
 
-  s.homepage     = "http://EXAMPLE/CountryCode"
+  s.homepage     = "http://pixnet.net"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -40,7 +40,7 @@ Pod::Spec.new do |s|
   #
 
   # s.license      = "MIT (example)"
-  s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
+  s.license      = { :type => "MIT", :file => "LICENSE" }
 
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -65,7 +65,7 @@ Pod::Spec.new do |s|
   #
 
   # s.platform     = :ios
-  s.platform     = :ios, "5.0"
+  s.platform     = :ios, "7.0"
 
   #  When using multiple platforms
   # s.ios.deployment_target = "5.0"
@@ -79,7 +79,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "http://EXAMPLE/CountryCode.git", :tag => "0.0.1" }
+  s.source       = { :git => "https://github.com/pixnet/PIXCountryCode.git", :tag => "0.0.2" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -90,7 +90,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "CountryCode/.{h,m}"
+  s.source_files  = "CountryCode/*.{h,m}"
 
   # s.public_header_files = "Classes/**/*.h"
 
