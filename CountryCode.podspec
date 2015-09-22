@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "CountryCode"
-  s.version      = "0.0.3"
+  s.version      = "0.0.4"
   s.summary      = "Search Country Code."
 
   s.description  = <<-DESC
@@ -79,7 +79,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/dennisPixnet/PIXCountryCode.git", :tag => "0.0.3" }
+  s.source       = { :git => "https://github.com/dennisPixnet/PIXCountryCode.git", :tag => "0.0.4" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -90,8 +90,8 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "CountryCode/*.{h,m}", "CountryCode/country_codes.json"
-
+  s.source_files  = "CountryCode/*.{h,m}"
+  s.resources = "CountryCode/country_codes.json" 
   # s.public_header_files = "Classes/**/*.h"
 
 
