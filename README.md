@@ -1,2 +1,2 @@
 # PIXCountryCode
-月來搜尋國碼的 library
+用來搜尋國碼的 library
