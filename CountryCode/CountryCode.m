@@ -36,6 +36,8 @@
     return jsonDic;
 }
 -(NSMutableArray *)searchCountryCodeWithKeyword:(NSString *)keyword{
+    NSAssert([keyword isKindOfClass:[NSString class]], @"keyword should be NSString");
+    
     [resultArray removeAllObjects];
     NSDictionary *allCountry = countryDictionary[@"country_code"];
     
@@ -45,6 +47,24 @@
         if (range.length) {
             //            NSLog(@"has keyword :%@",countryName);
             NSDictionary *tmpDic = @{@"code": countryDictionary[@"id_to_countrycode"][key], @"countryName": countryName};
+            [resultArray addObject:tmpDic];
+        }
+    }
+    return resultArray;
+}
+
+
+-(NSMutableArray *)searchCountryIDWithKeyword:(NSString *)keyword{
+    NSAssert([keyword isKindOfClass:[NSString class]], @"keyword should be NSString");
+    
+    [resultArray removeAllObjects];
+    NSDictionary *allCountry = countryDictionary[@"country_code"];
+    
+    for (NSString *key in allCountry) {
+        NSRange range =[key rangeOfString:keyword];
+        if (range.length) {
+            //            NSLog(@"has keyword :%@",countryName);
+            NSDictionary *tmpDic = @{@"code": countryDictionary[@"id_to_countrycode"][key], @"countryName": allCountry[key], @"ID": key};
             [resultArray addObject:tmpDic];
         }
     }

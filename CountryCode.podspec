@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "CountryCode"
-  s.version      = "0.0.5"
+  s.version      = "0.0.6"
   s.summary      = "Search Country Code."
 
   s.description  = <<-DESC
@@ -79,7 +79,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/dennisPixnet/PIXCountryCode.git", :tag => "0.0.5" }
+  s.source       = { :git => "https://github.com/dennisPixnet/PIXCountryCode.git", :tag => "#{s.version}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
