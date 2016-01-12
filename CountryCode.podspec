@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "CountryCode"
-  s.version      = "0.0.9"
+  s.version      = "0.0.10"
   s.summary      = "Search Country Code."
 
   s.description  = <<-DESC
